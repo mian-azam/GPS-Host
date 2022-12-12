@@ -1,0 +1,265 @@
+@import url(./reset.css);
+
+
+:root {
+    --app-dark-bg: #1a1d28;
+    --app-red: #ff3c57;
+    --app-green: #33ab4e;
+    --app-purple: #833cff;
+    --app-orange: #ff833c;
+    --app-blue: #3c57ff;
+    --app-blue-hover: #364ee6;
+    --app-dark-grey: #3a434d;
+    --app-light-grey: #6c7e90;
+}
+
+body {
+    background-color: #f2fffcff;
+    transition: all 0.25s ease-in-out;
+}
+
+.container {
+    width: min(100% - 50px, 1280px);
+    margin-inline: auto;
+}
+
+
+
+
+/* ----------------------------------------------- */
+/*               HERO BANNER                       */
+/* ----------------------------------------------- */
+
+.hero-banner {
+    background-image: url(../media/hero-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100vh;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+}
+
+.overlap-hero-banner {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(192, 187, 198, 0.3);
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px -16px 10px -10px;
+}
+
+/* ----------------------------------------------- */
+/*               HEADER                       */
+/* ----------------------------------------------- */
+header {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    background-color: var(--app-dark-bg);
+    position: fixed;
+}
+
+.flexbox {
+    display: flex;
+}
+
+.heading h1 {
+    color: #f0f2f4;
+    font-size: 30px;
+    margin-left: 3px;
+}
+
+.heading {
+    margin: 10px 0;
+}
+
+nav {
+    margin: 20px 0;
+    width: 50%;
+}
+
+.heading {
+    width: 50%;
+    display: flex;
+}
+
+.heading img {
+    width: 40px;
+    height: 40px;
+}
+
+nav ul {
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fafafa;
+    transition: color 0.25s ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: #fafafa;
+    box-shadow: 0px 1px 0px #fafafa;
+    transition: box-shadow 0.25s ease-in-out;
+}
+
+nav li+li {
+    margin-left: 10px;
+}
+
+
+/* ================================================================================ */
+
+#map {
+    height: calc(100vh - 152px);
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: #3a434d;
+}
+
+.mapboxgl-ctrl-logo {
+    visibility: hidden;
+}
+
+.para {
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+    text-decoration: underline;
+}
+
+/* ================================================================================ */
+
+
+
+/* -------------------------------------MAIN CONTENT----------------------------------- */
+
+div .title {
+    margin-inline: auto;
+    color: #f0f2f4;
+    text-decoration: solid;
+    text-shadow: 0px 2px 2px #352a4f;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: trans 0.5s ease-in;
+}
+
+div .title figure img {
+    box-shadow: none;
+}
+
+div .title h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+div .title p {
+    font-size: 25px;
+}
+
+
+
+/* -------------------animated down arrow */
+
+.down-arrow {
+    position: fixed;
+    top: calc(100vh - 80px);
+    left: 50%;
+    width: 0;
+    height: 34px;
+    border: 2px solid;
+    border-radius: 2px;
+    animation: jumpInfinite 1.5s infinite;
+}
+
+.down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+}
+
+@keyframes jumpInfinite {
+    0% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: 20px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+
+
+/* -----------------------------------FOOTER-------------------------------------- */
+
+footer {
+    margin-top: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px -26px 30px -10px, rgba(0, 0, 0, 0.1) 0px -16px 10px -10px;
+
+}
+
+.footer-nav {
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translateX(-10px);
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+}
+
+footer ul li {
+    color: #f0f2f4;
+}
+
+footer ul li+li {
+    margin-left: 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: var(--app-light-grey);
+    transition: color 0.25s ease-in-out;
+}
+
+.twitter:hover {
+    color: #00acee;
+}
+
+.github:hover {
+    color: #000000;
+}
+
+.linkedin:hover {
+    color: #0e76a8;
+}
