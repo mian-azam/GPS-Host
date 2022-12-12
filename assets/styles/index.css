@@ -122,10 +122,17 @@ nav li+li {
     width: 100%;
     margin-bottom: 40px;
     background-color: #3a434d;
+    display: grid;
+    place-items: center;
 }
 
 .mapboxgl-ctrl-logo {
     visibility: hidden;
+}
+
+.error {
+    color: #f0f2f4;
+    font-size: 40px;
 }
 
 .para {
@@ -174,7 +181,7 @@ div .title p {
 /* -------------------animated down arrow */
 
 .down-arrow {
-    position: fixed;
+    position: absolute;
     top: calc(100vh - 80px);
     left: 50%;
     width: 0;

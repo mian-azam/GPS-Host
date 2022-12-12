@@ -5,6 +5,7 @@
 
 const heading = select('.heading');
 const center = select('.center');
+const errmsg = select('.error');
 //==================================================================================
 
 function onEvent(event, selector, callback) {
@@ -20,7 +21,7 @@ function select(selector, parent = document) {
 //==============================================================================
 
 function getLocation(position) {
-    heading.style.visibility = 'visible';
+    errmsg.style.visibility = 'hidden';
     const { latitude, longitude } = position.coords;
 
     mapboxgl.accessToken = 'pk.eyJ1IjoidGFzaHBhbnJhIiwiYSI6ImNsYmdyd25nczBjNngzd3EzYWdqd2draXUifQ.xlyJIjdH5g74vO5ITOU0zQ';
@@ -42,6 +43,7 @@ function getLocation(position) {
 }
 
 function errorHandler(error) {
+
     console.log(error.message);
 }
 
